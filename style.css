@@ -23,7 +23,6 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     color: black;
     height: auto;
-    animation: fade-and-slide;
 }
 
 header {
@@ -527,6 +526,9 @@ nav a:hover {
     margin: auto;
     margin-top: 40px;
     background-color: var(--teal_medium);
+    animation: fade-and-slide 2.5s;
+
+
 }
 
 #contact_container {
@@ -534,6 +536,9 @@ nav a:hover {
     width: 80vw;
     background-color: var(--teal_medium);
     display: flex;
+    animation: fade-and-slide 1.5s;
+    border-right-style: solid;
+    border-bottom-style: solid;
 }
 
 
