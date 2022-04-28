@@ -357,6 +357,16 @@ nav a:hover {
     height: 600px;
 }
 
+#exercise_selection h2{
+    width: 70%;
+    margin: auto;
+}
+
+#exercise_selection p {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 40px;
+}
 
 #selection_container {
     width: 70%;
@@ -404,6 +414,12 @@ nav a:hover {
 
 }
 
+#create_tabs:hover {
+    outline-style: ridge;
+    outline-width: 3px;
+    outline-color: white;
+}
+
 .nav-tabs {
     border-width: 1px;
     border-bottom-style: solid;
@@ -415,11 +431,10 @@ nav a:hover {
 }
 
 .tab-content {
-
     margin: auto;
     margin-top: 0px;
     margin-bottom: 40px;
-    padding-top: 0px;
+    /*padding-top: 0px;*/
     text-align: center;
 }
 
@@ -626,7 +641,6 @@ nav a:hover {
 
 #contact_container #contact_options form{
     width: 50%;
-
 }
 
 #contact_locations {
