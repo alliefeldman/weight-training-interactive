@@ -29,13 +29,13 @@
         <div id="no_hover" onmouseover="console.log('hiii')">
         </div>
         <div id="hover">
-            <img id="fixed_indicator" src="fixed_indicator/0.png">
+            <img id="fixed_indicator" >
             <ul id="options">
-                <li><a onclick="scrollTo()">What is Strength Training?</a></li>
-                <li><a>Goals</a></li>
-                <li><a>Training Frequency</a></li>
-                <li><a>Training Environment</a></li>
-                <li><a>Exercise Selection</a></li>
+                <li><a onclick="scroll_to_id('what_is_strength_training')">What is Strength Training?</a></li>
+                <li><a onclick="scroll_to_id('goals')">Goals</a></li>
+                <li><a onclick="scroll_to_id('frequency')">Training Frequency</a></li>
+                <li><a onclick="scroll_to_id('environment')">Training Environment</a></li>
+                <li><a onclick="scroll_to_id('exercise_selection')">Exercise Selection</a></li>
             </ul>
         </div>
 
@@ -45,7 +45,7 @@
             <h1>An <span>Interactive</span> Guide to Strength Training</h1>
             <h2>For anyone</h2>
         </div>
-        <img id="index_image" src="media/index_image.png">
+        <img id="index_image" src="media/index_image.png" height="350">
     </div>
 
     <div id="about_this_guide">
@@ -104,21 +104,23 @@
         <div id="gym_or_home">
             <div class="card">
                 <div class="card-inner">
-                     <div id="gym" class="front">
+                     <div class="front">
                         <h3>The Gym</h3>
                     </div>
-                    <div id="gym" class="back">
-                        <h4>The Gym</h3>
+                    <div class="back">
+                        <h4>The Gym</h4>
                         <p>omg the gym it works ah</p>
                     </div>
                 </div>
             </div>
+
+
             <div class="card">
                 <div class="card-inner">
-                     <div id="home" class="front">
+                     <div class="front">
                         <h3>At Home</h3>
                     </div>
-                    <div id="home" class="back">
+                    <div class="back">
                         <h4>At Home</h4>
                         <p>Woohooo</p>
                     </div>
@@ -129,12 +131,20 @@
     </div>
     <div id="exercise_selection">
         <h2>Exercise Selection</h2>
-        <p>description- be like - this has nothing to do with power/hypertrophy phases bc this is for beginners and that is in the create a program sections</p>
-        <div id="splits">
-            <button id="upper-lower">Upper/Lower</button>
-            <button>Push/Pull/Legs</button>
-            <button>Full Body</button>
+            <p>description- be like - this has nothing to do with power/hypertrophy phases bc this is for beginners and that is in the create a program sections</p>
+        <div id="selection_container">
+            <div id="exercise_buttons">
+                <div id="upper_lower">
+                    <button class="Upper Body" onclick="update_upper_lower(this.classList.toString()); selectUpperOrLower(this)">Upper Body</button>
+                    <button class="Lower Body" onclick="update_upper_lower(this.classList.toString()); selectUpperOrLower(this)">Lower Body</button>
+                </div>
+            </div>
+            <div id="exercises" onload="displayExercises()">
+
+            </div>
+
         </div>
+
     </div>
 
 </body>

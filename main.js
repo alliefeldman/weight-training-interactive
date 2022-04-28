@@ -42,17 +42,11 @@ function pickRandomExercise(obj) {
     return result;
 }
 
-
-function test(){
-    for (var prop in listOfExercises) {
-        if (listOfExercises[prop]["Push"] == true && listOfExercises[prop]["home"] == true) {
-            console.log (listOfExercises[prop]);
-        }
-    }
-
+function scroll_to_id(id){
+    let scroll_to_element = document.getElementById(id);
+    console.log(id);
+    scroll_to_element.scrollIntoView();
 }
-
-test();
 
 
 function addDescription(id) {
@@ -116,19 +110,48 @@ function selectEnvironment(element) {
 }
 
 
-var isDown = false;
+var upper_lower_filter;
+var push_pull_filter;
 
-function mouseDown(){
-    isDown = true;
-}
-
-function mouseUp(){
-    if (isDown) {
-        createProgram();
+function update_upper_lower(className) {
+    if (upper_lower_filter == className) {
+        upper_lower_filter = null;
     }
-    isDown = false;
+    else {
+        upper_lower_filter = className;
+    }
+    console.log(upper_lower_filter);
 }
 
+function update_push_pull(className) {
+    if (push_pull_list.includes(id)) {
+        let index = push_pull_list.indexOf(id);
+        push_pull_list.splice(index,1);
+    }
+    else {
+        push_pull_list.push(id);
+    }
+    console.log(push_pull_list)
+}
+
+function selectUpperOrLower(element){
+    let id = element.id;
+    if (id == "upper_or_lower_selected") {
+        element.removeAttribute("id");
+    }
+    else {
+        let currentlySelected = document.getElementById("upper_or_lower_selected");
+        if (currentlySelected != null) {
+            currentlySelected.removeAttribute("id");
+        }
+        element.setAttribute("id", "upper_or_lower_selected");
+    }
+
+}
+
+function displayExercises() {
+
+}
 
 function createProgram() {
     /// First, gather all values
