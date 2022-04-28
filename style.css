@@ -357,15 +357,10 @@ nav a:hover {
     height: 600px;
 }
 
-#exercise_selection h2{
+#exercise_selection h2, #exercise_selection p {
     width: 70%;
     margin: auto;
-}
-
-#exercise_selection p {
-    width: 70%;
-    margin: auto;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
 
 #selection_container {
@@ -375,8 +370,19 @@ nav a:hover {
 }
 
 #exercise_buttons {
+    margin-top: 40px;
     width: 40%;
 }
+#exercise_buttons div {
+    text-align: center;
+}
+
+
+#exercise_buttons div button{
+    width: 40%;
+
+}
+
 
 #upper_lower #upper_or_lower_selected, #push_pull #push_or_pull_selected {
     background-color: lightgray;
