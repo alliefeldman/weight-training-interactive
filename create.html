@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- jquery styles -->
+    <link rel="stylesheet" href="jquery-ui-1.13.1/jquery-ui.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- jquery js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+     <script>
+        $( function() {
+            function hexFromRGB(r, g, b) {
+              var hex = [
+                r.toString( 16 ),
+                g.toString( 16 ),
+                b.toString( 16 )
+              ];
+              $.each( hex, function( nr, val ) {
+                if ( val.length === 1 ) {
+                  hex[ nr ] = "0" + val;
+                }
+              });
+              return hex.join( "" ).toUpperCase();
+            }
+            function refreshSwatch() {
+              var red = $( "#red" ).slider( "value" ),
+                green = $( "#green" ).slider( "value" ),
+                blue = $( "#blue" ).slider( "value" ),
+                hex = hexFromRGB( red, green, blue );
+              $( "#swatch" ).css( "background-color", "#" + hex );
+            }
+
+            $( "#red, #green, #blue" ).slider({
+              orientation: "horizontal",
+              range: "min",
+              max: 255,
+              value: 127,
+              slide: refreshSwatch,
+              change: refreshSwatch
+            });
+            $( "#red" ).slider( "value", 255 );
+            $( "#green" ).slider( "value", 140 );
+            $( "#blue" ).slider( "value", 60 );
+          } );
+     </script>
+     <script src="main.js" type="text/javascript"></script>
+    <title>An Interactive Guide to Strength Training</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Information</a>
+            <a href="create.html">Create A Program</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div id="create_title">
+        Create a Program
+    </div>
+    <div id="create_tabs">
+        <ul class="nav nav-tabs">
+
+            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#create_experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#create_goals">Goals</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#create_environment">Environment</a></li>
+        </ul>
+        <div class="tab-content">
+
+            <div class="tab-pane container active" id="create_experience">
+                <button style="float:bottom" class="experience_button"  name="experience" onclick="selectExperience(this)">Minimal (< 3 months)</button>
+                <button class="experience_button" id="experience_selected" name="experience" onclick="selectExperience(this)">Moderate (3-12 months)</button>
+                <button class="experience_button" name="experience" onclick="selectExperience(this)">Sufficient (> 12 months)</button>
+            </div>
+            <div class="tab-pane container fade" id="create_goals">
+                <div class="ui-widget-content background" style="border:0;">
+                    <div class="slider_div">
+                        <p>Strength</p><div onmousedown="mouseDown()" id="red"></div>
+                    </div>
+                    <div class="slider_div">
+                        <p>Mental Health</p><div onmousedown="mouseDown()" id="green"></div>
+                    </div>
+                    <div class="slider_div">
+                        <p>Aesthetics</p><div onmousedown="mouseDown()" id="blue"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane container fade" id="create_environment">
+                <button class="create_environment_button" id="environment_selected" onclick="selectEnvironment(this)">Gym</button>
+                <button class="create_environment_button" onclick="selectEnvironment(this);">Home</button>
+            </div>
+        </div>
+    </div>
+    <button id="create_program_button" onclick="createProgram()">Create Program Using Selected Variables</button>
+    <div id="results">
+
+    </div>
+
+</body>
+</html>

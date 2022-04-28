@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+
+
+
+    <script src="main.js" type="text/javascript"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>An Interactive Guide to Strength Training</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Information</a>
+            <a href="create.html">Create A Program</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div id="fixed_menu">
+        <div id="no_hover" onmouseover="console.log('hiii')">
+        </div>
+        <div id="hover">
+            <img id="fixed_indicator" src="fixed_indicator/0.png">
+            <ul id="options">
+                <li><a onclick="scrollTo()">What is Strength Training?</a></li>
+                <li><a>Goals</a></li>
+                <li><a>Training Frequency</a></li>
+                <li><a>Training Environment</a></li>
+                <li><a>Exercise Selection</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="container">
+        <div id="website_title">
+            <h1>An <span>Interactive</span> Guide to Strength Training</h1>
+            <h2>For anyone</h2>
+        </div>
+        <img id="index_image" src="media/index_image.png">
+    </div>
+
+    <div id="about_this_guide">
+        <h3>About This Guide</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Proin fermentum leo vel orci. Turpis egestas integer eget aliquet nibh praesent. Amet facilisis magna etiam tempor orci. Morbi tincidunt ornare massa eget. Arcu dictum varius duis at consectetur lorem donec. Netus et malesuada fames ac turpis egestas. Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. In est ante in nibh. Quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Vitae et leo duis ut diam quam. Integer malesuada nunc vel risus. Felis eget nunc lobortis mattis aliquam faucibus purus in. Feugiat in ante metus dictum. Neque egestas congue quisque egestas. Purus sit amet luctus venenatis lectus.</p>
+    </div>
+    <div id="what_is_strength_training">
+        <h2>What is Strength Training?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Proin fermentum leo vel orci. Turpis egestas integer eget aliquet nibh praesent. Amet facilisis magna etiam tempor orci. Morbi tincidunt ornare massa eget. Arcu dictum varius duis at consectetur lorem donec. Netus et malesuada fames ac turpis egestas. Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. In est ante in nibh. Quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Vitae et leo duis ut diam quam. Integer malesuada nunc vel risus. Felis eget nunc lobortis mattis aliquam faucibus purus in. Feugiat in ante metus dictum. Neque egestas congue quisque egestas. Purus sit amet luctus venenatis lectus.</p>
+    </div>
+    <div id="goals">
+        <div id="goal_options">
+            <a id="strength" onclick="addDescription(this.id)"><div><img src="media/barbell.png"></div></a><br>
+            <a id="mental" onclick="addDescription(this.id)"><div><img src="media/brain.png"></div> </a><br>
+            <a id="aesthetics" onclick="addDescription(this.id)"><div><img src="media/muscles.png"></div></a><br>
+        </div>
+        <div id="goal_description">
+            <div id="expanded">
+            </div>
+        </div>
+    </div>
+    <div id="frequency">
+        <h2>Frequency</h2>
+        <p>Fre</p>
+        <div id="slider">
+            <div id="days_per_week">
+                <div id="1x" onclick="selectFrequency(this.className, this.id)">
+
+                </div>
+                <div id="2x" onclick="selectFrequency(this.className, this.id)">
+
+                </div>
+                <div id="3x" onclick="selectFrequency(this.className, this.id)">
+
+                </div>
+                <div id="4x" onclick="selectFrequency(this.className, this.id)" class="selected_frequency">
+
+                </div>
+                <div id="5x" onclick="selectFrequency(this.className, this.id)">
+
+                </div>
+                <div id="6x" onclick="selectFrequency(this.className, this.id)">
+
+                </div>
+                <div id="7x" onclick="selectFrequency(this.className, this.id)">
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div id="environment">
+        <div id="triangle"></div>
+        <h2>Training Environment</h2>
+        <div id="gym_or_home">
+            <div class="card">
+                <div class="card-inner">
+                     <div id="gym" class="front">
+                        <h3>The Gym</h3>
+                    </div>
+                    <div id="gym" class="back">
+                        <h4>The Gym</h3>
+                        <p>omg the gym it works ah</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                     <div id="home" class="front">
+                        <h3>At Home</h3>
+                    </div>
+                    <div id="home" class="back">
+                        <h4>At Home</h4>
+                        <p>Woohooo</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="exercise_selection">
+        <h2>Exercise Selection</h2>
+        <p>description- be like - this has nothing to do with power/hypertrophy phases bc this is for beginners and that is in the create a program sections</p>
+        <div id="splits">
+            <button id="upper-lower">Upper/Lower</button>
+            <button>Push/Pull/Legs</button>
+            <button>Full Body</button>
+        </div>
+    </div>
+
+</body>
+</html>

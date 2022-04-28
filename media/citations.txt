@@ -1,0 +1,18 @@
+
+index_image.png: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vectors%2Fweights-lifting-cartoon-vectors&psig=AOvVaw1BrdNNQUomo3VXzJupo1dj&ust=1651076000093000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCIjr3MCPsvcCFQAAAAAdAAAAABAD
+
+
+barbell.png: https://www.google.com/url?sa=i&url=http%3A%2F%2Fclipart-library.com%2Ffree%2Fbarbell-clipart-png.html&psig=AOvVaw3pLfS2HtQsZmJhZuE_j-c_&ust=1651077683467000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNCO0eOVsvcCFQAAAAAdAAAAABAP
+
+
+muscles.png: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fflexing-muscles&psig=AOvVaw0_87Ui_bBOSg8X0KuHDxyC&ust=1651078462490000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMDiodiYsvcCFQAAAAAdAAAAABAD
+
+
+brain.png: https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.supercoloring.com%2Fcoloring-pages%2Fhappy-brain-character-graduate-with-diploma&psig=AOvVaw0Mcn6NM69aYFoJjDtOJ_XD&ust=1651078738921000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCIiE8d6ZsvcCFQAAAAAdAAAAABAa
+
+linkedin_logo.png:https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Flinkedin-logo_61109&psig=AOvVaw2FpwCu8T486q56gJweVLqz&ust=1651149944271000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKj5xpSktPcCFQAAAAAdAAAAABAD
+
+
+instagram_logo.png: https://www.google.com/url?sa=i&url=https%3A%2F%2Ffreebiesupply.com%2Flogos%2Finstagram-logo%2F&psig=AOvVaw25VxZDJPFMSkEjsYPwlZrK&ust=1651150198710000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKjs1_SjtPcCFQAAAAAdAAAAABAD
+
+facebook_logo.png: https://www.google.com/url?sa=i&url=https%3A%2F%2Fworldvectorlogo.com%2Flogo%2Ffacebook-icon-1&psig=AOvVaw3XrhuCmyNXQBm0-oI2UPSg&ust=1651150553354000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPiCnKCltPcCFQAAAAAdAAAAABAD
