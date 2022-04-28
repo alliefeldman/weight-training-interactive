@@ -95,10 +95,6 @@ function selectFrequency(item_class, id) {
 
 }
 
-function scrollTo() {
-    
-}
-
 function selectEnvironment(element) {
     let id = element.id;
     if (id == "environment_selected") {
@@ -115,29 +111,43 @@ var push_pull_filter;
 
 function update_upper_lower(className) {
     if (upper_lower_filter == className) {
+        if (upper_lower_filter == "Upper Body") {
+            let push_pull_buttons = document.getElementById("push_pull");
+            let all_buttons = document.getElementById("exercise_buttons")
+            all_buttons.removeChild(push_pull_buttons);
+        }
         upper_lower_filter = null;
+
     }
     else {
+        if (upper_lower_filter == "Upper Body" && className == "Lower Body") {
+            let push_pull_buttons = document.getElementById("push_pull");
+            let all_buttons = document.getElementById("exercise_buttons")
+            all_buttons.removeChild(push_pull_buttons);
+        }
         upper_lower_filter = className;
+        if (className == "Upper Body") {
+            display_push_pull_buttons()
+        }
+
     }
-    console.log(upper_lower_filter);
 }
 
 function update_push_pull(className) {
-    if (push_pull_list.includes(id)) {
-        let index = push_pull_list.indexOf(id);
-        push_pull_list.splice(index,1);
+    if (push_pull_filter == className) {
+        push_pull_filter = null;
     }
     else {
-        push_pull_list.push(id);
+        push_pull_filter = className;
     }
-    console.log(push_pull_list)
+    console.log(push_pull_filter);
 }
 
 function selectUpperOrLower(element){
     let id = element.id;
     if (id == "upper_or_lower_selected") {
         element.removeAttribute("id");
+
     }
     else {
         let currentlySelected = document.getElementById("upper_or_lower_selected");
@@ -145,11 +155,74 @@ function selectUpperOrLower(element){
             currentlySelected.removeAttribute("id");
         }
         element.setAttribute("id", "upper_or_lower_selected");
-    }
 
+    }
+}
+
+function selectPushOrPull(element){
+    let id = element.id;
+    if (id == "push_or_pull_selected") {
+        element.removeAttribute("id");
+
+    }
+    else {
+        let currentlySelected = document.getElementById("push_or_pull_selected");
+        if (currentlySelected != null) {
+            currentlySelected.removeAttribute("id");
+        }
+        element.setAttribute("id", "push_or_pull_selected");
+
+    }
+}
+
+
+function display_push_pull_buttons() {
+    let all_buttons = document.getElementById("exercise_buttons")
+
+    let buttons_div = document.createElement("div");
+    buttons_div.setAttribute("id", "push_pull");
+
+    let pushbutton = document.createElement("button");
+    pushbutton.setAttribute("class", "Push");
+    pushbutton.setAttribute("onclick", "update_push_pull(this.classList.toString()); selectPushOrPull(this); displayExercises()");
+
+    pushbutton.innerText = "Push";
+
+    let pullbutton = document.createElement("button");
+    pullbutton.setAttribute("class", "Pull");
+    pullbutton.setAttribute("onclick", "update_push_pull(this.classList.toString()); selectPushOrPull(this); displayExercises()");
+    pullbutton.innerText = "Pull";
+
+
+    buttons_div.appendChild(pushbutton);
+    buttons_div.appendChild(pullbutton);
+    all_buttons.appendChild(buttons_div);
 }
 
 function displayExercises() {
+    let exercisesDiv = document.getElementById("exercises");
+    exercisesDiv.innerHTML = "";
+    for (exercise in listOfExercises) {
+        let exercise_h4 = document.createElement("h4");
+        if (upper_lower_filter == null && exercise != "initial") {
+            exercise_h4.innerText = exercise;
+        }
+        else if (listOfExercises[exercise][upper_lower_filter] == true) {
+            if (upper_lower_filter == "Lower Body") {
+                exercise_h4.innerText = exercise;
+            }
+            else {
+                if (push_pull_filter == null && exercise != "initial") {
+                    exercise_h4.innerText = exercise;
+                }
+                else if (listOfExercises[exercise][push_pull_filter] == true) {
+                    exercise_h4.innerText = exercise;
+                }
+            }
+
+        }
+        exercisesDiv.appendChild(exercise_h4)
+    }
 
 }
 
@@ -176,9 +249,6 @@ function createProgram() {
 
     let aestheticsSlider = document.getElementById("blue").getElementsByClassName("ui-slider-range")[0];
     let aestheticsGoal = parseInt(aestheticsSlider.style["width"]);
-    // console.log(strengthGoal);
-    // console.log(mentalGoal);
-    // console.log(aestheticsGoal);
 
     // find mainGoal to then get frequency
     var mainGoal;
@@ -191,7 +261,7 @@ function createProgram() {
     else {
         mainGoal = "aesthetics";
     }
-    console.log(mainGoal);
+
 
     // finding frequency and split lists
     var frequency;

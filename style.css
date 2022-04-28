@@ -368,7 +368,7 @@ nav a:hover {
     width: 40%;
 }
 
-#upper_lower #upper_or_lower_selected {
+#upper_lower #upper_or_lower_selected, #push_pull #push_or_pull_selected {
     background-color: lightgray;
 }
 
@@ -377,6 +377,11 @@ nav a:hover {
     height: 400px;
     border-style: solid;
     background-color: var(--yellow_dark);
+    overflow-y: scroll;
+}
+
+#exercises h4 {
+    font-size: 20px;
 }
 
 /*Create a Program*/

@@ -17,7 +17,7 @@
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <title>An Interactive Guide to Strength Training</title>
 </head>
-<body>
+<body onload="displayExercises()">
     <header>
         <nav>
             <a href="index.html">Information</a>
@@ -135,11 +135,11 @@
         <div id="selection_container">
             <div id="exercise_buttons">
                 <div id="upper_lower">
-                    <button class="Upper Body" onclick="update_upper_lower(this.classList.toString()); selectUpperOrLower(this)">Upper Body</button>
-                    <button class="Lower Body" onclick="update_upper_lower(this.classList.toString()); selectUpperOrLower(this)">Lower Body</button>
+                    <button class="Upper Body" onclick="update_upper_lower(this.classList.toString()); selectUpperOrLower(this); displayExercises()">Upper Body</button>
+                    <button class="Lower Body" onclick="update_upper_lower(this.classList.toString()); selectUpperOrLower(this); displayExercises()">Lower Body</button>
                 </div>
             </div>
-            <div id="exercises" onload="displayExercises()">
+            <div id="exercises" >
 
             </div>
 
