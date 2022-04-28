@@ -21,7 +21,15 @@ var listOfExercises = {
 "Bent Over Row":{"firstTwo": true, "lastThree":true,"gym":true, "home": true, "Upper Body":true, "Lower Body":false, "Push":false, "Pull":true, "Legs":false },
 "Hammer Curls":{"firstTwo": false, "lastThree":true,"gym":true, "home": true, "Upper Body":true, "Lower Body":false, "Push":false, "Pull":true, "Legs":false },
 "Pushups":{"firstTwo": true, "lastThree":true,"gym":true, "home": true, "Upper Body":true, "Lower Body":false, "Push":true, "Pull":false, "Legs":false },
-"Barbell Chest Press":{"firstTwo": true, "lastThree":false,"gym":true, "home": true, "Upper Body":true, "Lower Body":false, "Push":true, "Pull":false, "Legs":false },
+"Dumbbell Chest Press":{"firstTwo": true, "lastThree":false,"gym":true, "home": true, "Upper Body":true, "Lower Body":false, "Push":true, "Pull":false, "Legs":false },
+"Single Arm Rows":{"firstTwo": true, "lastThree":true,"gym":true, "home": true, "Upper Body":true, "Lower Body":false, "Push":false, "Pull":true, "Legs":false },
+"Pull Aparts (resistance band)":{"firstTwo": false, "lastThree":true,"gym":true, "home": true, "Upper Body":true, "Lower Body":false, "Push":false, "Pull":true, "Legs":false },
+"Dumbbell Calf Raises":{"firstTwo": false, "lastThree":true,"gym":true, "home": true, "Upper Body":false, "Lower Body":true, "Push":false, "Pull":false, "Legs":true },
+"Dumbbell Overhead Tricep Extension":{"firstTwo": false, "lastThree":true,"gym":true, "home": true, "Upper Body":true, "Lower Body":false, "Push":true, "Pull":false, "Legs":false },
+"Resistance Band Pulldown":{"firstTwo": true, "lastThree":true,"gym":false, "home": true, "Upper Body":true, "Lower Body":false, "Push":false, "Pull":true, "Legs":false },
+"Resistance Band Facepull":{"firstTwo": false, "lastThree":true,"gym":false, "home": true, "Upper Body":true, "Lower Body":false, "Push":false, "Pull":true, "Legs":false },
+"Skull Crusher":{"firstTwo": false, "lastThree":true,"gym":true, "home": true, "Upper Body":true, "Lower Body":false, "Push":true, "Pull":false, "Legs":false }
+
 };
 
 // from https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object
@@ -35,7 +43,16 @@ function pickRandomExercise(obj) {
 }
 
 
+function test(){
+    for (var prop in listOfExercises) {
+        if (listOfExercises[prop]["Push"] == true && listOfExercises[prop]["home"] == true) {
+            console.log (listOfExercises[prop]);
+        }
+    }
 
+}
+
+test();
 
 
 function addDescription(id) {
@@ -216,7 +233,7 @@ function createProgram() {
 
     for(let day = 0; day < frequency; day++) {
         let workout = split[day];
-        console.log(workout);
+        console.log(split);
         let dayDiv = document.createElement("div");
         let dayHeader = document.createElement("h2");
         dayHeader.innerText = `Day ${day+1}/${frequency}: ${split[day]}`;
@@ -236,12 +253,9 @@ function createProgram() {
                 }
                 exercise_list.push(exercise_name);
             }
-
-            console.log("HELL YEAH");
             let exercise_h4 = document.createElement("h4");
             exercise_h4.innerText = exercise_name;
             dayDiv.appendChild(exercise_h4);
-
         }
         results_div.appendChild(dayDiv);
     }
