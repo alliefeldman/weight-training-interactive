@@ -135,7 +135,6 @@ nav a:hover {
 
 
     #website_title h1 span:hover {
-        text-decoration: underline;
         color: var(--pink_header);
     }
 
