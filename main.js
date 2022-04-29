@@ -54,7 +54,9 @@ function addDescription(id) {
     let expanded_div = document.getElementById("expanded");
     expanded_div.innerHTML = "";
     console.log(expanded_div.innerHTML);
+    description_div = document.createElement("div");
     let description = document.createElement("p");
+    description.setAttribute("id", "description");
     if (id == "strength") {
         description.innerText = "i is strong. i is strong. i is strong. i is strong. i is strong. i is strong. i is strong. i is strong. i is strong. i is strong. i is strong. i is strong.";
     }
@@ -64,7 +66,8 @@ function addDescription(id) {
     else if (id == "aesthetics") {
         description.innerText = "glutes and abs yay glutes and abs yay glutes and abs yay glutes and abs yay glutes and abs yay glutes and abs yay glutes and abs yay glutes and abs yay glutes and abs yay.";
     }
-    expanded_div.appendChild(description);
+    description_div.appendChild(description);
+    expanded_div.appendChild(description_div);
 }
 
 
@@ -231,7 +234,7 @@ function createProgram() {
     // Experience Tab
     let experienceButton = document.getElementById("experience_selected");
     var experience;
-    if (experienceButton.innerText == "Minimal (< 3 months)") {
+    if (experienceButton.innerText == "Minimal<br>(< 3 months)") {
         experience = "minimal";
     }
     else if (experienceButton.innerText == "Moderate (3-12 months)") {

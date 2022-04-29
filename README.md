@@ -2,7 +2,7 @@ Figma Link: https://www.figma.com/file/GtXPrnIKr7uaBH8u2re0Hv/An-Interactive-Gui
 
 Website Link: https://weight-training-interactive.web.app
 
-GitHub Link: 
+GitHub Link: https://github.com/alliefeldman/weight-training-interactive
 
 Description: Right now, the weight rooms in gyms are lacking in diversity. It is one of my initiatives to encourage people of all demographics to not be intimidated to pick up heavy things! This website is an information guide on the benefits of strength training, the ___, and even allows you to view a custom workout program based on your needs. 
 
@@ -32,4 +32,4 @@ Bootstrap:
 
 
 Major challenges:
-The most significant challenge in implementing the website is t
+The most significant challenge in implementing the website was creating the "Create a Program" page. I was not anticipating the level of algorithmic complexity that would go into randomly creating a 3, 4, 5, or 6 day workout split depending on different inputted parameters. Ultimately, I think it turned out rather good!
