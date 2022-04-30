@@ -12,14 +12,18 @@ Description: Right now, the weight rooms in gyms are lacking in diversity. It is
 Using the website, a user can:
 - Read about the benefits of weight training
 	- Scroll down the Information Page
-- Browse some common types of exercises and workout splits
+- Browse some common types of exercises
 	- Scroll through the Information Page
+- Filter exercises to view by muscle group
+	- Click on the filters on the Information Page
 - Design an example of a workout program based on their experience, goals, and available environment.
 	- Fill out the Information on the Create page
 - Contact me via the contact form
 	- On the contact page
 - Find my email addresses and social media accounts
 	- on the contact page
+- Change the color of "interactive"
+	- Hover over the "interactive" on the home page
 
 External libraries: 
 
