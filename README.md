@@ -32,6 +32,9 @@ Bootstrap:
 - Why: Bootstrap allowed me to create consistent form elements and buttons throughout my website
 - How: The library was used to crate the tabs on my "Create a Program" page
 
+Iteration from HW7:
+I added a lot of interactive features along the way in the creation of this website. HW7 included the general framework for the website, but it wasn't until this assignment where I figured out, for example, how to filter exercises to display on the home page, until after I designed the structure of my other JS functions (I was able to utilize the same dataset for both the information page and the create page!)
+
 
 Major challenges:
 The most significant challenge in implementing the website was creating the "Create a Program" page. I was not anticipating the level of algorithmic complexity that would go into randomly creating a 3, 4, 5, or 6 day workout split depending on different inputted parameters. Ultimately, I think it turned out rather good!
