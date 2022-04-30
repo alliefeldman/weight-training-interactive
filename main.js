@@ -58,13 +58,13 @@ function addDescription(id) {
     let description = document.createElement("p");
     description.setAttribute("id", "description");
     if (id == "strength") {
-        description.innerText = "i is strong. i is strong. i is strong. i is strong. i is strong. i is strong. i is strong. i is strong. i is strong. i is strong. i is strong. i is strong.";
+        description.innerText = "Tristique senectus et netus et. Neque sodales ut etiam sit. Non quam lacus suspendisse faucibus. Nec ullamcorper sit amet risus nullam eget. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Nunc sed augue lacus viverra vitae. Eget mauris pharetra et ultrices neque ornare aenean euismod elementum. Est ullamcorper eget nulla facilisi etiam dignissim diam quis enim.";
     }
     else if (id == "mental") {
-        description.innerText = "big brain big brain big brain big brain big brain big brain big brain big brain big brain big brain big brain big brain";
+        description.innerText = "Ultricies mi quis hendrerit dolor magna. Pellentesque elit eget gravida cum sociis natoque penatibus et magnis. Magna fermentum iaculis eu non diam phasellus. Imperdiet sed euismod nisi porta lorem mollis. Massa vitae tortor condimentum lacinia quis vel. Vitae purus faucibus ornare suspendisse sed. Volutpat commodo sed egestas egestas fringilla phasellus. Non enim praesent elementum facilisis leo vel fringilla. Massa tempor nec feugiat nisl pretium.";
     }
     else if (id == "aesthetics") {
-        description.innerText = "glutes and abs yay glutes and abs yay glutes and abs yay glutes and abs yay glutes and abs yay glutes and abs yay glutes and abs yay glutes and abs yay glutes and abs yay.";
+        description.innerText = "Molestie a iaculis at erat pellentesque adipiscing. Accumsan sit amet nulla facilisi morbi. Sollicitudin aliquam ultrices sagittis orci a scelerisque. Magna sit amet purus gravida quis blandit. Sagittis purus sit amet volutpat consequat. Nec dui nunc mattis enim. Fusce id velit ut tortor pretium viverra suspendisse. Urna duis convallis convallis tellus. Enim neque volutpat ac tincidunt vitae semper quis. Dui sapien eget mi proin sed libero. Viverra orci sagittis eu volutpat odio. Lorem ipsum dolor sit amet consectetur adipiscing elit.";
     }
     description_div.appendChild(description);
     expanded_div.appendChild(description_div);
@@ -95,6 +95,9 @@ function selectFrequency(item_class, id) {
     // then, add class to correct element
     selected_element = document.getElementById(id);
     selected_element.classList.add("selected_frequency");
+    // then, addd a new text element
+    let box = document.getElementById("frequency_description");
+    box.innerText = `${id}: Tristique senectus et netus et. Dolor morbi non arcu risus quis varius quam quisque id. At erat pellentesque adipiscing commodo. Fermentum iaculis eu non diam phasellus vestibulum lorem sed. Malesuada nunc vel risus commodo. Neque sodales ut etiam sit. Non quam lacus suspendisse faucibus. Nec ullamcorper sit amet risus nullam eget. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Nunc sed augue .`
 
 }
 

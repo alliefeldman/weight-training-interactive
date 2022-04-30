@@ -206,11 +206,20 @@ nav a:hover {
     }
 
 #goals {
-    display: flex;
+
     width: 70vw;
     margin: auto;
     background-color: var(--yellow);
     justify-content: center;
+}
+#goals h2, #goals p {
+    margin:  0px 5% 0px 5%;
+}
+#goals_flex {
+    display: flex;
+    margin: auto;
+    width: 80%;
+
 }
 
     #goals #goal_options {
