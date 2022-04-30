@@ -4,6 +4,8 @@ Website Link: https://weight-training-interactive.web.app
 
 GitHub Link: https://github.com/alliefeldman/weight-training-interactive
 
+Video Link: https://youtu.be/EJHbUfIqvXU
+
 Description: Right now, the weight rooms in gyms are lacking in diversity. It is one of my initiatives to encourage people of all demographics to not be intimidated to pick up heavy things! This website is an information guide on the benefits of strength training, how to begin, and even allows you to create and view a custom workout program based on your needs. 
 
 
