@@ -486,6 +486,11 @@ nav a:hover {
 
 #exercises h4 {
     font-size: 20px;
+    text-decoration: underline;
+}
+
+#exercises h4:hover {
+    cursor: pointer;
 }
 
 /*Create a Program*/
@@ -774,6 +779,13 @@ nav a:hover {
     top: 25%;
     left: 25%;
     display: flex;
+    overflow-y: scroll;
+}
+
+.exercise_info_div div {
+    margin-right: 2vw;
+    padding-top: 20px;
+    margin-bottom: 30px;
 }
 
 .exercise_info_div button {

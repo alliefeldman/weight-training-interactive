@@ -34,38 +34,57 @@ const listOfExercises = {
 };
 
 const exerciseDetails = {
-    "base":{"you_will_need":[], "steps":[]},
-    "Barbell Deadlift":{"you_will_need":["A barbell rack (supports recommended)", "Barbell", "An equal weight of plates to put on either side", "Barbell clips (optional)"], "steps":[]},
-    "Bench Press":{},
-    "Back Squat":{},
-    "Machine Lat Pulldown":{},
-    "Dumbbell Bicep Curl":{},
-    "Romanian Deadlift":{},
-    "Bulgarian Split Squat":{},
-    "Leg Press":{},
-    "Goblet Squat":{},
-    "Barbell Shoulder Press":{},
-    "Dumbbell Shoulder Press":{},
-    "Lateral Raises":{},
-    "Hip Abductions":{},
-    "Glute Bridges": {},
-    "Hip Thrust":{},
-    "Leg Curl":{},
-    "Leg Extension":{},
-    "Seated Row":{},
-    "Bent Over Row":{},
-    "Hammer Curls":{},
-    "Pushups":{},
-    "Dumbbell Chest Press":{},
-    "Single Arm Rows":{},
-    "Pull Aparts (resistance band)":{},
-    "Dumbbell Calf Raises":{},
-    "Dumbbell Overhead Tricep Extension":{},
-    "Resistance Band Pulldown":{},
-    "Resistance Band Facepull":{},
-    "Skull Crusher":{},
-    "Walking Lunges":{},
-    "Single Leg Glute Bridges":{}
+    "base":{"you_will_need":[], "steps":[], "cues":[]},
+    "Barbell Deadlift":{
+        "you_will_need":[
+            "A barbell rack (supports recommended)",
+            "Barbell",
+            "An equal weight of plates to put on either side",
+            "Barbell clips (optional)"
+            ],
+        "steps":[
+            "Adjust the bar holders so that the bar is held slightly below shoulder height",
+            "Place the bar on the bar holders and load plates on each side, securing with barbell clips (optional)",
+            "Step up to the bar and duck your head underneath. Then, position the bar so that it rests on the back of your shoulders, slightly below the nape of your neck.",
+            "Stand up straight to lift the bar off the bar holders, then take 1-2 steps backwards away from the rack, staying within the supports.",
+            "With a stance slightly wider than shoulder width, keep your heels planted as you bend your knees. Full range of motion is achieved when the tops of your legs are parellel to the ground.",
+            "Making sure to engage your core, stand up by driving your heels into the ground."
+            ],
+        "cues":[
+            "Keep your core engaged",
+            "Keep your heels on the ground and use them to drive the movement",
+            "Squeeze your glutes at the top of each squat"
+            ]},
+    "Bench Press":{"you_will_need":[], "steps":[], "cues":[]},
+    "Back Squat":{"you_will_need":[], "steps":[], "cues":[]},
+    "Machine Lat Pulldown":{"you_will_need":[], "steps":[], "cues":[]},
+    "Dumbbell Bicep Curl":{"you_will_need":[], "steps":[], "cues":[]},
+    "Romanian Deadlift":{"you_will_need":[], "steps":[], "cues":[]},
+    "Bulgarian Split Squat":{"you_will_need":[], "steps":[], "cues":[]},
+    "Leg Press":{"you_will_need":[], "steps":[], "cues":[]},
+    "Goblet Squat":{"you_will_need":[], "steps":[], "cues":[]},
+    "Barbell Shoulder Press":{"you_will_need":[], "steps":[], "cues":[]},
+    "Dumbbell Shoulder Press":{"you_will_need":[], "steps":[], "cues":[]},
+    "Lateral Raises":{"you_will_need":[], "steps":[], "cues":[]},
+    "Hip Abductions":{"you_will_need":[], "steps":[], "cues":[]},
+    "Glute Bridges": {"you_will_need":[], "steps":[], "cues":[]},
+    "Hip Thrust":{"you_will_need":[], "steps":[], "cues":[]},
+    "Leg Curl":{"you_will_need":[], "steps":[], "cues":[]},
+    "Leg Extension":{"you_will_need":[], "steps":[], "cues":[]},
+    "Seated Row":{"you_will_need":[], "steps":[], "cues":[]},
+    "Bent Over Row":{"you_will_need":[], "steps":[], "cues":[]},
+    "Hammer Curls":{"you_will_need":[], "steps":[], "cues":[]},
+    "Pushups":{"you_will_need":[], "steps":[], "cues":[]},
+    "Dumbbell Chest Press":{"you_will_need":[], "steps":[], "cues":[]},
+    "Single Arm Rows":{"you_will_need":[], "steps":[], "cues":[]},
+    "Pull Aparts (resistance band)":{"you_will_need":[], "steps":[], "cues":[]},
+    "Dumbbell Calf Raises":{"you_will_need":[], "steps":[], "cues":[]},
+    "Dumbbell Overhead Tricep Extension":{"you_will_need":[], "steps":[], "cues":[]},
+    "Resistance Band Pulldown":{"you_will_need":[], "steps":[], "cues":[]},
+    "Resistance Band Facepull":{"you_will_need":[], "steps":[], "cues":[]},
+    "Skull Crusher":{"you_will_need":[], "steps":[], "cues":[]},
+    "Walking Lunges":{"you_will_need":[], "steps":[], "cues":[]},
+    "Single Leg Glute Bridges":{"you_will_need":[], "steps":[], "cues":[]},
 }
 
 // from https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object
@@ -475,13 +494,13 @@ function showExerciseInfo(exercise) {
     let you_will_need_heading = document.createElement("h2");
     you_will_need_heading.innerText = "You will need:";
     exercise_info_inner.appendChild(you_will_need_heading);
-    let ul = document.createElement("ul");
+    let ul_need = document.createElement("ul");
     for (var item = 0; item < exerciseDetails[exercise]["you_will_need"].length; item++) {
         let li = document.createElement("li");
         li.innerText = exerciseDetails[exercise]["you_will_need"][item];
-        ul.appendChild(li);
+        ul_need.appendChild(li);
     }
-    exercise_info_inner.appendChild(ul);
+    exercise_info_inner.appendChild(ul_need);
 
     let steps_heading = document.createElement("h2");
     steps_heading.innerText = "Steps:";
@@ -491,9 +510,21 @@ function showExerciseInfo(exercise) {
     for (var item = 0; item < exerciseDetails[exercise]["steps"].length; item++) {
         let li = document.createElement("li");
         li.innerText = exerciseDetails[exercise]["steps"][item];
+        ol.appendChild(li);
     }
+    exercise_info_inner.appendChild(ol);
 
+    let cues_heading = document.createElement("h2");
+    cues_heading.innerText = "Cues:";
+    exercise_info_inner.appendChild(cues_heading);
 
+    let ul_cues = document.createElement("ul");
+    for (var item = 0; item < exerciseDetails[exercise]["cues"].length; item++) {
+        let li = document.createElement("li");
+        li.innerText = exerciseDetails[exercise]["cues"][item];
+        ul_cues.appendChild(li);
+    }
+    exercise_info_inner.appendChild(ul_cues);
 
     exerciseInfoClass.appendChild(x);
     exerciseInfoClass.appendChild(exercise_info_inner);
