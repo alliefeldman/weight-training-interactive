@@ -1,3 +1,5 @@
+This is a final project for the course 'Programming Usable Interfaces' at Carnegie Mellon University.
+
 Figma Link: https://www.figma.com/file/GtXPrnIKr7uaBH8u2re0Hv/An-Interactive-Guide-to-Strength-Training?node-id=0%3A1
 
 Website Link: https://weight-training-interactive.web.app
